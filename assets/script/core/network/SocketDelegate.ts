@@ -49,7 +49,6 @@ export class SocketDelegate implements ISocketDelegate {
 
     onSocketError(errMsg) {
         errMsg && Log.error('socket error, msg = ' + errMsg);
-        // 具体网络错误或失败的原因很多种很复杂，这里只是demo，简单处理，失败了就继续connect
         UIHelp.ShowDialog({
             title: '联网失败', content: '是否重新连接？（请确认服务器是否开启）',
             certainCb: () => {

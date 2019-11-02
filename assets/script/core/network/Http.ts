@@ -29,7 +29,7 @@ export class Ajax extends TsAjax {
                         result = data;
                     }
                 } else { 
-                    result = data; //error
+                    result = data; 
                 }
             }
         } else { 

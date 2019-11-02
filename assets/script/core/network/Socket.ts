@@ -16,7 +16,7 @@ export interface ISocket {
 }
 
 /**
- * WebSocket的具体实现
+ * WebSocket
  */
 export class WbSocket implements ISocket {
     private _url: string;
@@ -46,7 +46,6 @@ export class WbSocket implements ISocket {
     }
 
     /**
-     * 
      * @param data {string | ArrayBuffer}
      */
     send(data: string | ArrayBuffer) {
