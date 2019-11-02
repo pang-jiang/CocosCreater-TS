@@ -137,7 +137,6 @@ export default abstract class UIBase extends cc.Component {
 
     }
 
-
     /**
      * 注册touch事件
      * @param node 

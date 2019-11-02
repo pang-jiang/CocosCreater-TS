@@ -7,6 +7,7 @@ class GameController {
     network: Network = null;
 
     constructor() {
+        
     }
 
     init() {
