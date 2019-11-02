@@ -37,6 +37,7 @@ export default class UIManager {
                 console.error(`UIManager OpenUI: load ui error: ${error}`);
                 return;
             }
+
             if (this.getUI(uiClass)) {
                 console.error(`UIManager OpenUI 2: ui ${uiClass.getName()} is already exist, please check`);
                 return;

@@ -1,5 +1,5 @@
 import { TipsItem } from "./TipsItem";
-import UIBase from "../UIBase";
+import UIBase from "../../core/uiManager/UIBase";
 
 const { ccclass, menu, property } = cc._decorator;
 
