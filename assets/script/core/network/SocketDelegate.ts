@@ -1,10 +1,10 @@
 import { SocketEvent } from "../const/EventConst";
 import { MessageRegister } from "./Message";
-import EventManager from "../../manager/EventManager";
-import { ISocket, SocketState, WbSocket, WxSocket } from "./Socket";
-import { Log, LOG_TAG } from "../../utils/Log";
-import UIHelp from "../../lobby/UIHelp";
-import GameController from "../../GameController";
+import EventManager from "../eventManager/EventManager";
+import { ISocket, SocketState, WbSocket } from "./Socket";
+import { Log, LOG_TAG } from "../utils/Log";
+import UIHelp from "../uiManager/UIHelp";
+import GameController from "../GameController";
 
 const DATA_TOTAL_LEN = 4;	//数据总长度
 const PROTOCOLTYPE_LEN = 4;	//协议号长度
@@ -32,12 +32,7 @@ export class SocketDelegate implements ISocketDelegate {
 
     connect(url: string) {
         Log.log(LOG_TAG.SOCKET, 'connect socket = ' + url);
-        // 根据平台创建socket
-        if (cc.sys.platform === cc.sys.WECHAT_GAME) {
-            this._socket = new WxSocket(url, this);
-        } else {
-            this._socket = new WbSocket(url, this);
-        }
+        this._socket = new WbSocket(url, this);
         this._socket.connect();
     }
 

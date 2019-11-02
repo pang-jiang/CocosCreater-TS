@@ -1,5 +1,5 @@
 import { ISocketDelegate } from "./SocketDelegate";
-import { Log } from "../../utils/Log";
+import { Log } from "../utils/Log";
 
 export enum SocketState {
     CONNECTING = 1,
