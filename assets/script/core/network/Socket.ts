@@ -30,7 +30,8 @@ export class WbSocket implements ISocket {
 
     connect() {
         let ws = this._webSocket = new WebSocket(this._url);
-        ws.binaryType = 'arraybuffer';  // 默认为blob，这里要改为arraybuffer
+        // 默认为blob，这里要改为arraybuffer
+        ws.binaryType = 'arraybuffer';  
         ws.onopen = (event) => {
             this._delegate.onSocketOpen();
         };

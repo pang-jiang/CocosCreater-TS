@@ -123,7 +123,6 @@ export class SocketDelegate implements ISocketDelegate {
         for (let i = 0; i < dataLen; i++) {
             sendView.setInt8(PROTOCOLTYPE_LEN + DATA_TOTAL_LEN + i, dataView.getInt8(i));
         }
-
         return sendBuf;
     }
 
