@@ -50,7 +50,7 @@ export class SocketDelegate implements ISocketDelegate {
     onSocketError(errMsg) {
         errMsg && Log.error('socket error, msg = ' + errMsg);
         UIHelp.ShowDialog({
-            title: '联网失败', content: '是否重新连接？（请确认服务器是否开启）',
+            title: '网络连接失败', content: '是否重新连接？（请确认服务器是否开启）',
             certainCb: () => {
                 GameController.network.connect();
             }
