@@ -6,10 +6,6 @@ import ProtoLoader from "./network/ProtoLoader";
 class GameController {
     network: Network = null;
 
-    constructor() {
-        
-    }
-
     init() {
         // 新建一个网络单例
         this.network = SingletonFactory.getInstance(Network);
