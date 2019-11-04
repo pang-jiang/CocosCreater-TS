@@ -33,11 +33,13 @@ export default class UIMain extends UIBase {
 
 	onOpenNotice() {
 		//UIHelp.ShowUI(UINotice);
-		let obj = {
-			"title":"通知",
-			"content": "你好",
-		}
-		UIHelp.ShowDialog(obj);
+		UIHelp.ShowDialog({
+			title:"通知",
+			content: "你好",
+			certainCb: () => {
+				
+			}
+		});
 	}
 
 }
