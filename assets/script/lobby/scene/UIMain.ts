@@ -32,7 +32,6 @@ export default class UIMain extends UIBase {
 	}
 
 	onOpenNotice() {
-		//UIHelp.ShowUI(UINotice);
 		UIHelp.ShowDialog(
 		    title: "通知",
 		    content: "你好",
