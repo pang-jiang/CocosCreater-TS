@@ -1,7 +1,6 @@
 import auto_main from "../AutoUI/scene/auto_main";
 import UIBase from "../../core/uiManager/UIBase";
 import UIHelp from "../../core/uiManager/UIHelp";
-import UINotice from "../notice/UINotice";
 import UIConfitmDialog from "../tips/UIConfirmDialog";
 import { callbackify } from "util";
 
