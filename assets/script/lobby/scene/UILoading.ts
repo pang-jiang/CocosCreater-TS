@@ -25,8 +25,6 @@ export default class UILoading extends UIBase {
 	onShow() {
 		// 监听btn_login点击事件
 		this.onRegisterEvent(this.ui.btn_login, this.onLogin, this);
-
-		// 监听事件
 		EventManager.on(SocketEvent.SOCKET_OPEN, this.onSocketOpen, this);
 		EventManager.on(GameEvent.LOGIN_SUCCESS, this.onLoginSuccess, this);
 	}
@@ -34,7 +32,6 @@ export default class UILoading extends UIBase {
 	onHide() {
 		// 取消监听btn_login点击事件
 		this.unRegisterEvent(this.ui.btn_login, this.onLogin, this);
-
 		EventManager.off(SocketEvent.SOCKET_OPEN, this.onSocketOpen, this);
 		EventManager.off(GameEvent.LOGIN_SUCCESS, this.onLoginSuccess, this);
 	}
