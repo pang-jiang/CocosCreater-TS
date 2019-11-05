@@ -35,7 +35,6 @@ export default class UILoading extends UIBase {
 		// 取消监听btn_login点击事件
 		this.unRegisterEvent(this.ui.btn_login, this.onLogin, this);
 
-		// 取消监听事件
 		EventManager.off(SocketEvent.SOCKET_OPEN, this.onSocketOpen, this);
 		EventManager.off(GameEvent.LOGIN_SUCCESS, this.onLoginSuccess, this);
 	}
