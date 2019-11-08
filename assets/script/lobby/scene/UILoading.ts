@@ -43,7 +43,6 @@ export default class UILoading extends UIBase {
 
 	onSocketOpen() {
 		this.ui.loginNode.active = true;
-		// 读取缓存账号
 		let account = GameDataCenter.account.getAccount();
 		if (account != '') {
 			this.ui.edit_account.getComponent(cc.EditBox).string = account;
