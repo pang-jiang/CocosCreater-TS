@@ -44,6 +44,7 @@ export default abstract class UIBase extends cc.Component {
 
     /**通知事件列表 */
     private _notifyEventList: Map<string, Function>;
+    
     /**点击事件列表 */
     private _registerEventList: Map<string, RegisterEvent>;
 
@@ -73,9 +74,7 @@ export default abstract class UIBase extends cc.Component {
 
     onDisable() {
         this.unRegisterEvent(this.node, this.touchEvent, this);
-
         this.onHide();
-
         let self = this;
         this._notifyEventList.forEach((f, key) => {
             EventManager.off(key, f, self);
