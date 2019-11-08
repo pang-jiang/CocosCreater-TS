@@ -81,7 +81,7 @@ export default class DataModel {
      */
     protected Set(sKey: string, value: string | number) {
         if (this._dLocalData[sKey] && this._dLocalData[sKey] == value) {
-            return false;//一样就不要改了
+            return false;
         }
         this._dLocalData[sKey] = value;
         return true;
