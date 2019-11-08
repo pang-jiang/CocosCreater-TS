@@ -37,8 +37,6 @@ export default class LoginModel extends DataModel {
         return {
             // key为消息名，value为触发函数
             ['G2C_Login']: (msg: any) => { this.LoginSuccess(msg) },
-            ['G2C_Login1']: (msg: any) => { this.LoginSuccess(msg) },
-            ['G2C_Login2']: (msg: any) => { this.LoginSuccess(msg) },
         }
     }
 
