@@ -52,7 +52,6 @@ export default class UILoading extends UIBase {
 	onLogin() {
 		let account = this.ui.edit_account.getComponent(cc.EditBox).string;
 		let password = this.ui.edit_password.getComponent(cc.EditBox).string;
-		
 		GameDataCenter.account.Login(account, password);
 	}
 
