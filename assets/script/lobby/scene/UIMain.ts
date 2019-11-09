@@ -1,8 +1,8 @@
 import auto_main from "../AutoUI/scene/auto_main";
 import UIBase from "../../core/uiManager/UIBase";
 import UIHelp from "../../core/uiManager/UIHelp";
+import UINotice from "../notice/UINotice";
 import UIConfitmDialog from "../tips/UIConfirmDialog";
-import { callbackify } from "util";
 
 const { ccclass, menu, property } = cc._decorator;
 
@@ -31,13 +31,7 @@ export default class UIMain extends UIBase {
 	}
 
 	onOpenNotice() {
-		UIHelp.ShowDialog(
-		    title: "通知",
-		    content: "你好",
-		    certainCb: () => {
-			console.log("确定");
-		    }
-		);
+		UIHelp.ShowUI(UINotice);
 	}
 
 }
