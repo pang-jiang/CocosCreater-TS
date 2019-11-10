@@ -13,10 +13,6 @@ export default class UIManager {
         return this.instance;
     }
 
-    private constructor() {
-
-    }
-
     /**
      * 打开UI
      * @param uiClass 
