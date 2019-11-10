@@ -18,7 +18,6 @@ export default class UILoading extends UIBase {
 
 	onUILoad() {
 		this.ui = this.node.addComponent(auto_loading);
-
 		this.ui.loginNode.active = false;
 	}
 
