@@ -9,10 +9,6 @@ class GameDataCenter {
     account: LoginModel = null;
     system: SystemModel = null;
 
-    constructor() {
-
-    }
-
     newModel<T extends DataModel>(c: { new(): T }): T {
         let obj = SingletonFactory.getInstance(c);
         this._tModel.push(obj);
