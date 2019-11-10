@@ -28,7 +28,4 @@ export default class UITips extends UIBase {
         tip.playTip(message);
     }
 
-    onClose() {
-
-    }
 }
