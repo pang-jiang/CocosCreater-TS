@@ -56,7 +56,7 @@ export default class UIManager {
             uiNode.zIndex = zOrder;
             this.uiList.push(ui);
             ui.tag = uiClass;
-
+            this.startFadeIn(uiNode);
             callback && callback(ui);
         });
     }
@@ -81,6 +81,7 @@ export default class UIManager {
         for (let i = 0; i < this.uiList.length; ++i) {
             if (this.uiList[i].tag === uiClass) {
                 if (cc.isValid(this.uiList[i].node)) {
+                    this.startFadeIn(this.uiList[i].node)
                     this.uiList[i].node.destroy();
                     this.clearDependsRes(uiClass.getUrl());
                 }
