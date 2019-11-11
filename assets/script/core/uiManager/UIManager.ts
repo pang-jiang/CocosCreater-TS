@@ -133,11 +133,17 @@ export default class UIManager {
         return ui.node.active;
     }
     
-     public startFadeIn (node) {
+    public startFadeIn (node) {
         node.position = cc.v2(0, 0);
         node.setScale(0.1);
         node.opacity = 0;
         let actionFadeIn = cc.spawn(cc.fadeTo(0.3, 255), cc.scaleTo(0.3, 1.0).easing(cc.easeBackInOut()));
         node.runAction(actionFadeIn);
     }
+    
+     public startFadeOut (node) {
+        let actionFadeOut = cc.spawn(cc.fadeTo(0.3, 0), cc.scaleTo(0.3, 2.0));
+        node.runAction(actionFadeOut);
+    }
+    
 }
