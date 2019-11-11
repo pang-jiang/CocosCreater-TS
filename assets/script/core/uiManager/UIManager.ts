@@ -71,9 +71,9 @@ export default class UIManager {
         // console.log(`UIManager clearDependsRes: release ${prefabUrl} depends resources `, deps);
         deps.forEach((item) => {
             // todo：排除公共资源，然后清理
-            // if (item.indexOf('common') === -1) {
-            //     cc.loader.release(item);
-            // }
+            if (item.indexOf('common') === -1) {
+                cc.loader.release(item);
+            }
         });
     }
 
