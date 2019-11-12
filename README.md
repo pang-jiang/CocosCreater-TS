@@ -1,7 +1,7 @@
 CocosCreater-TS框架
 ===================
 
-#网络通信webSocket+protobuf
+#网络通信webSocket+protobuf+axios
 
 #UI管理
 
