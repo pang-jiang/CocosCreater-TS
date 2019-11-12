@@ -143,7 +143,7 @@ export default class UIManager {
     }
     
      public startFadeOut (node) {
-        let actionFadeOut = cc.spawn(cc.fadeTo(0.3, 0), cc.scaleTo(0.3, 2.0));
+        let actionFadeOut = cc.spawn(cc.fadeTo(0.3, 0), cc.scaleTo(0.3, 2.0).easing(cc.easeBackIn()));
         node.runAction(actionFadeOut);
     }
     
